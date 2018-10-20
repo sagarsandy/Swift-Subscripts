@@ -11,22 +11,7 @@ let name = myInfo["Name"]
 
 // Mostly subscripts are used in/for key-value pair based concepts
 
-// Simple example
-struct WeekDays {
-    
-    var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-    
-    subscript(index : Int) -> String {
-        
-        return days[index] + " Lazy Day"
-    }
-    
-}
-
-let workingDays = WeekDays()
-workingDays[0]  //This will return Monday Lazy Day, so we can perform some oprations on key value pair based data
-
-// Another use case is, as we discussed earlier fetching dictionary value always returns optional value, let' see how to over caome this.
+// As we discussed earlier fetching dictionary value always returns optional value, let' see how to over caome this.
 
 struct StudentHeights {
     
@@ -46,6 +31,24 @@ struct StudentHeights {
 let allStudentsHeights = StudentHeights.init(heights: ["Sagar" : 5.9, "Sandy" : 6.0, "Buuny" : 6.2])
 let sagarHeight = allStudentsHeights["Sagar"] // Will return 5.9, and this is not an optional value :D
 let noHight = allStudentsHeights["NoOne"] // Will return 0, and this is not an optional value :D
+
+
+// Another use case is, we can perform oprations on dictionar data
+// Simple example
+struct WeekDays {
+    
+    var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+    
+    subscript(index : Int) -> String {
+        
+        return days[index] + " Lazy Day"
+    }
+    
+}
+
+let workingDays = WeekDays()
+workingDays[0]  //This will return Monday Lazy Day, so we can perform some oprations on key value pair based data
+
 
 
 
